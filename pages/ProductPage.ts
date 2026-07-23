@@ -8,8 +8,8 @@ export class ProductPage {
   }
 
   async addFirstProductToCart() {
-    await this.page.locator('.btn_add_to_cart').first().click();
-  }
+  await this.page.locator('[data-test^="add-to-cart"]').first().click();
+}
 
   async getCartCount() {
     return this.page.locator('.shopping_cart_badge');
